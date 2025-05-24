@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root
+{
+	--background: #1c1a1a;
+	--text-color: #ffffff;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+
+html, body
+{
+	height: 100%
+}
+
+body
+{
+	color: var(--text-color);
+	background: var(--background);
+}
+
+.onlineChat-container
+{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.onlineChat-window
+{
+	width: 1200px;
+	background: #262626;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.onlineChat-header
+{
+	padding: 15px;
+	font-size: 14px;
+	border-bottom: 1px solid #313131;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+/* .. */
+.onlineChat-body
+{
+	height: 650px;
+	display: flex;
+	flex-direction: column;
+}
+
+.onlineChat-messageContainer
+{
+	flex: 1;
+	overflow-y: auto;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.onlineChat-inputContainer
+{
+	border-top: 1px solid #313131;
+	flex-shrink: 0;
+	display: flex;
+	gap: 8px;
+	padding: 20px;
+}
+
+.message-input
+{
+	width: 100%;
+	background: none;
+	outline: none;
+}
+
+.onlineChat-connectStatus
+{
+	width: 7px;
+	height: 7px;
+	display: inline-block;
+	background: #9f1010;
+	border-radius: 50%;
+	margin-right: 4px;
+}
+
+.onlineChat-connectStatus--disconnected
+{
+	background: #9f1010;
+}
+
+.onlineChat-connectStatus--connected
+{
+	background: #17d52b;
+}
+
+/* msg */
+.ul-dot
+{
+	width: 3px;
+	height: 3px;
+	background: #757070;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.message-user
+{
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.message
+{
+	min-width: 200px;
+	background: rgba(208, 199, 199, 0.08);
+	padding: 7px 14px;
+	border-radius: 8px;
+	position: relative;
+	width: fit-content;
+}
+
+.message-username,
+.message-time
+{
+	color: #a8a8a8;
+}
+
+.ul-dotOnline
+{
+	width: 5px;
+	height: 5px;
+	background: #757070;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.ul-dotOnline--online
+{
+	background: #17d52b;
+}
+
+.ul-dotOnline--offline
+{
+	background: #9f1010;
+}
